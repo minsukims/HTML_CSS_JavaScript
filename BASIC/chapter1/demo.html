@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        float: left;
+      }
+      body {
+        background-color: lightblue;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+      }
+      p {
+        font-family: verdana;
+        font-size: 20px;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        const $body = this.document.querySelector("body");
+        const $backcolorChange = document.querySelector("#backcolor-change");
+        $backcolorChange.addEventListener("click", function () {
+          const currentColor = getComputedStyle($body).backgroundColor;
+          if (currentColor === "rgb(173, 216, 230)") {
+            $body.style.backgroundColor = "green";
+          } else {
+            $body.style.backgroundColor = "lightblue";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Back to the Future</h1>
+    <img
+      src="Back_to_the_Future.jpg"
+      alt="Back_to_the_Future"
+      width="100"
+      height="120"
+    />
+
+    <p>
+      Back to the Future is a 1985 American science fiction film directed by
+      Robert Zemeckis, and written by zemeckis and Bob Gale. It stars Michael J.
+      Fox Christopher Lloyd, Lea Thompson, Crispin Glover, and Thomas F. Wilson.
+      Set in 1985(출처: 위키피디아)
+    </p>
+    <button type="button" id="backcolor-change">배경색 변경</button>
+  </body>
+</html>

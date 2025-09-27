@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쇼생크 탈출</title>
+    <style>
+      body {
+        background-color: rgb(213, 209, 209);
+        /* background-color: rgb(128, 128, 128); */
+      }
+      img {
+        float: left;
+      }
+      h1 {
+        color: rgb(144, 155, 163);
+        text-align: center;
+      }
+      p {
+        font-family: "굴림";
+        font-size: 20px;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        const $body = this.document.querySelector("body");
+        const $changeColor = document.querySelector("#bg-change");
+        $changeColor.addEventListener("click", function () {
+          const currentColor = getComputedStyle($body).backgroundColor;
+          if (currentColor === "rgb(213, 209, 209)") {
+            $body.style.backgroundColor = "rgb(128, 128, 128)";
+          } else {
+            $body.style.backgroundColor = "rgb(213, 209, 209)";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button type="button" id="bg-change">배경색 바꾸기</button>
+    <h1>쇼생크 탈출</h1>
+    <img src="two.jpg" alt="쇼생크 탈출" />
+    <p>
+      스티븐 킹의 원고지 700매 분량 중편 소설 <리타 헤이워드와 쇼생크 탈출>을
+      원작으로 한 1994년 미국 영화. 대체로 원작 소설의 내용에 충실하게 각색한
+      작품으로, 쇼생크 감옥에 갇힌 앤디 듀프레인을 중심으로 벌어지는 일을
+      그렸다. 아카데미 시상식 7개 부문에 후보에 올랐으며, 2015년부터 미국
+      의회도서관의 National Film Registry가 영구 보존하는 등 높은 평가를 받는다.
+    </p>
+  </body>
+</html>
